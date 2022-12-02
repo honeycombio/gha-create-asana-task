@@ -1,11 +1,26 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Create Asana Task'
+description: 'Create a task in Asana from Github triggers'
+author: 'Honeycomb'
 inputs:
-  milliseconds: # change this
+  asana-secret: 
     required: true
     description: 'input description here'
     default: 'default value if applicable'
+  asana-workspace-id:
+    required: true
+    description: 'Your Asana Workspace ID'
+  asana-project-id:
+    required: true
+    description: 'Your Asana Project ID'
+  asana-section-id:
+    required: true
+    description: 'Your Asana Section ID'
+  asana-task-name:
+    required: true
+    description: 'Name for Asana task that will be created'
+  asana-task-description:
+    description: 'Description for Asana task that will be created'
+
 runs:
   using: 'node16'
   main: 'dist/index.js'

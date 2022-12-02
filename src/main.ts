@@ -1,16 +1,25 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
+import asana from 'asana'
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    const token = core.getInput('asana-secret', {required: true})
+    core.setSecret(token)
+    const client = asana.Client.create().useAccessToken(token)
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    const workspaceId = core.getInput('asana-workspace-id', {required: true})
+    const projectId = core.getInput('asana-project-id', {required: true})
+    const sectionId = core.getInput('asana-section-id', {required: true})
+    const taskName = core.getInput('asana-task-name', {required: true})
+    const taskDescription = core.getInput('asana-task-description')
 
-    core.setOutput('time', new Date().toTimeString())
+    await client.tasks.create({
+      workspace: workspaceId,
+      projects: [projectId],
+      assignee_section: sectionId,
+      name: taskName,
+      notes: taskDescription
+    })
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }
