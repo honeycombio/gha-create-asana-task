@@ -14,6 +14,8 @@ This Github Action allows you to create an Asana task within your Github workflo
     asana-section-id: ${{ secrets.ASANA_SECTION_ID }}
     asana-task-name: My Asana Task
     asana-task-description: My Asana Description # optional
+    asana-due-date: 2022-12-05 # optional
+    asana-tags: '["123456789"]' # optional
 ```
 ## License
 

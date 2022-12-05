@@ -22,7 +22,7 @@ inputs:
     description: 'Description for Asana task'
     required: false
   asana-due-date:
-    description: 'Date on which Asana task is due'
+    description: 'Date on which Asana task is due (YYYY-MM-DD)'
     required: false
   asana-tags:
     description: 'List of tag IDs to associate with Asana task'
