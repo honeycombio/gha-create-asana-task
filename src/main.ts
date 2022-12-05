@@ -5,7 +5,11 @@ async function run(): Promise<void> {
   try {
     const token = core.getInput('asana-secret', {required: true})
     core.setSecret(token)
-    const client = asana.Client.create().useAccessToken(token)
+    const client = asana.Client.create({
+      defaultHeaders: {
+        'asana-enable': 'new_project_templates,new_user_task_lists'
+      }
+    }).useAccessToken(token)
 
     const workspaceId = core.getInput('asana-workspace-id', {required: true})
     const projectId = core.getInput('asana-project-id', {required: true})
