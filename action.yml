@@ -4,22 +4,30 @@ description: 'Trigger task creation in Asana from Github'
 
 inputs:
   asana-secret: 
-    required: true
     description: 'Asana PAT'
+    required: true
   asana-workspace-id:
-    required: true
     description: 'Your Asana Workspace ID'
+    required: true
   asana-project-id:
-    required: true
     description: 'Your Asana Project ID'
+    required: true
   asana-section-id:
-    required: true
     description: 'Your Asana Section ID (column the task should belong to)'
-  asana-task-name:
     required: true
-    description: 'Name for Asana task that will be created'
+  asana-task-name:
+    description: 'Name for Asana task'
+    required: true
   asana-task-description:
-    description: 'Description for Asana task that will be created'
+    description: 'Description for Asana task'
+    required: false
+  asana-due-date:
+    description: 'Date on which Asana task is due'
+    required: false
+  asana-tags:
+    description: 'List of tag IDs to associate with Asana task'
+    required: false
+  
 
 runs:
   using: 'node16'
