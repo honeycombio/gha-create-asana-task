@@ -60,7 +60,7 @@ function run() {
                 name: taskName,
                 notes: taskDescription,
                 due_on: dueDate,
-                tags: JSON.parse(tags)
+                tags: tags ? JSON.parse(tags) : ''
             });
         }
         catch (error) {

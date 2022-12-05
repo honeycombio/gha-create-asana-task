@@ -22,7 +22,7 @@ async function run(): Promise<void> {
       name: taskName,
       notes: taskDescription,
       due_on: dueDate,
-      tags: JSON.parse(tags)
+      tags: tags ? JSON.parse(tags) : ''
     })
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
