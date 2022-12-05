@@ -1,11 +1,11 @@
 name: 'Create Asana Task'
-description: 'Create a task in Asana from Github triggers'
 author: 'Honeycomb'
+description: 'Trigger task creation in Asana from Github'
+
 inputs:
   asana-secret: 
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Asana PAT'
   asana-workspace-id:
     required: true
     description: 'Your Asana Workspace ID'
@@ -14,7 +14,7 @@ inputs:
     description: 'Your Asana Project ID'
   asana-section-id:
     required: true
-    description: 'Your Asana Section ID'
+    description: 'Your Asana Section ID (column the task should belong to)'
   asana-task-name:
     required: true
     description: 'Name for Asana task that will be created'
