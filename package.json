@@ -1,8 +1,7 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
-  "private": true,
-  "description": "TypeScript template action",
+  "name": "gha-create-asana-task",
+  "version": "1.0.0",
+  "description": "Create Asana task Github Action",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
