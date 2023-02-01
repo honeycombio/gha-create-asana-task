@@ -22,7 +22,7 @@ async function run(): Promise<void> {
     await client.tasks.create({
       workspace: workspaceId,
       projects: [projectId],
-      assignee_section: sectionId,
+      memberships: [{ project: projectId, section: sectionId }],
       name: taskName,
       notes: taskDescription,
       due_on: dueDate,
