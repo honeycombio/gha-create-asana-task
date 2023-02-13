@@ -1,6 +1,6 @@
 {
   "name": "gha-create-asana-task",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create Asana task Github Action",
   "main": "lib/main.js",
   "scripts": {
