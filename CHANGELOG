@@ -13,6 +13,7 @@
 - Bump @vercel/ncc from 0.34.0 to 0.36.1 (#17) | [@jharley](https://github.com/jharley)
 - Bump @types/node from 18.11.10 to 18.13.0 (#20) | [@jharley](https://github.com/jharley)
 - Bump eslint and eslint-plugin-github (#21) | [@jharley](https://github.com/jharley)
+- Bump json5 from 1.0.1 to 1.0.2 (#24) | [@jharley](https://github.com/jharley)
 
 ## v1.0.0 [2022-12-05]
 
