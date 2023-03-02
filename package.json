@@ -32,12 +32,12 @@
     "@types/asana": "^0.18.11",
     "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "@vercel/ncc": "^0.36.1",
     "eslint": "^8.34.0",
     "eslint-plugin-github": "^4.6.0",
     "js-yaml": "^4.1.0",
-    "prettier": "2.8.0",
+    "prettier": "2.8.4",
     "typescript": "^4.9.5"
   }
 }
