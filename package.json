@@ -26,7 +26,7 @@
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
     "asana": "^1.0.0",
-    "axios": "^1.3.0"
+    "axios": "^1.9.0"
   },
   "devDependencies": {
     "@types/asana": "^0.18.11",
