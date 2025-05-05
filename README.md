@@ -1,5 +1,8 @@
 # `gha-create-asana-task` Action
 
+> [!IMPORTANT]
+> This repository is archived and no longer maintained.
+
 This Github Action allows you to create an Asana task within your Github workflows.
 
 ## How to use it
